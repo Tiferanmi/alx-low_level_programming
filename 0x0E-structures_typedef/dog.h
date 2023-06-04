@@ -1,32 +1,23 @@
-#ifndef DOG_H
-#define DOG_H
+#include <stdlib.h>
+#include "dog.h"
 
 /**
- * struct dog - a dog's basic info
- * @name: First member
- * @age: Second member
- * @owner: Third member
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * Description: Longer description
+ * Return: the length of the string
  */
-struct dog
+int _strlen(char *s)
 {
-	char *name;
-	float age;
-	char *owner;
-};
+	int i;
 
-/**
- * dog_t - typedef for struct dog
- */
-typedef struct dog dog_t;
+	i = 0;
 
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
-dog_t *new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
+	while (s[i] != '\0')
+	{
+		i++;
+	}
 
-#endif
+	return (i);
+}
 
